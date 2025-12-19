@@ -25,7 +25,8 @@ luac.out
 *.def
 *.exp
 
-# Shared objects (inc. Windows DLLs)
+# Shared objects (inc. Windows DLLs,mobile.
+)
 *.dll
 *.so
 *.so.*
