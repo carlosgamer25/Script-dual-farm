@@ -1,10 +1,14 @@
 -- Configurações Globais
 _G.Slapfarmsnow = {
-    glove = "Dual",
+    glove = "snow",
     enabled = true
 }
 _G.SnowSlapfarm = 100
 _G.Snoweffect = true
+
+
+end
+
 
 local auto_equipglove = "Dual"
 local auto_servehop = true
@@ -27,8 +31,11 @@ end
 disableAntiKick()
 
 -- Função para Equipar Luva Automaticamente
-task.spawn(function()
-    while task.wait(1) do
+task.spawn(function = equipSnow).
+
+end
+    
+while task.wait(1) do
         local lplr = game.Players.LocalPlayer
         if lplr.Character and not lplr.Character:FindFirstChild(auto_equipglove) then
             -- Evento padrão de equipar luva no Slap Battles
@@ -54,7 +61,7 @@ task.spawn(function()
                 -- Simulação de Slap (Uso do Item/Luva com Cooldown de 0.1)
                 local event = game:GetService("ReplicatedStorage"):FindFirstChild("GeneralAbility") or game:GetService("ReplicatedStorage"):FindFirstChild("Slap")
                 if event then
-                    event:FireServer(randomPlayer.Character)
+                    event:hopServer(randomPlayer.Character)
                 end
             end
         end
@@ -78,5 +85,5 @@ if auto_servehop then
     end)
 end
 
-print("Script Carregado no Codex: Farm Dual Ativado")
+
 
